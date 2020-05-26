@@ -1,0 +1,116 @@
+{
+	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+		{
+			"path": "pages/index/index",    //配置页面路径
+			"style": {    //设置头部导航栏的样式
+				"navigationBarTitleText": "首页",    //设置头部导航栏的标题
+				"enablePullDownRefresh":true,
+				"app-plus":{
+					"titleNView":{  
+						"searchInput":{  //设置头部搜索框
+							"autoFocus":false,  //是否自动获取焦点
+							"align":"left",    //文本对齐方式
+							"backgroundColor":"lightgrey", //输入框背景色
+							"borderRadius":"10px",  //设置圆角
+							"placeholder":"请输入商品名称",
+							"placeholderColor":"white",
+							"disabled":true
+						},
+						"buttons":[
+							{"type":"share"},
+							{"type":"menu","float":"left"}
+						]
+					}
+					
+				}
+			}
+		}
+	    ,{
+            "path" : "pages/news/news",
+            "style" : {
+				"navigationBarBackgroundColor":"#1571FA",  //设置导航栏背景色
+				"navigationBarTextStyle":"white",  //设置导航栏标题以及状态栏的前景色
+				"navigationBarTitleText":"新闻",
+				"app-plus":{   //设置app的相关导航栏的样式
+					"titleNView":{
+						"backgroundColor":"#FF758F",
+						"buttons":[
+							{"type":"share"},
+							{"type":"menu","float":"left"},
+							{
+							"fontSrc":"/static/font/iconfont.ttf",  //图标文件地址
+							"text":"\ue605",   //图标对应的unicode码（\u+取后四位）
+							"color":"#007AFF",  //图标颜色
+							"colorPressed":"#FFFFFF"  //图标被点击时的颜色
+							}
+						]
+					}
+				}
+			}
+        }
+        ,{
+            "path" : "pages/newsDetail/newsDetail",
+            "style" : {
+				// "navigationStyle":"custom",  //是否自定义头部导航栏
+				"enablePullDownRefresh":true  //是否开启下拉刷新
+			}
+        }
+        ,{
+            "path" : "pages/style/style",
+            "style" : {}
+        }
+        ,{
+            "path" : "pages/condition/condition",
+            "style" : {}
+        }
+        ,{
+            "path" : "pages/scroll/scroll",
+            "style" : {}
+        }
+        ,{
+            "path" : "pages/swiper/swiper",
+            "style" : {}
+        }
+        ,{
+            "path" : "pages/video/video",
+            "style" : {}
+        }
+        ,{
+            "path" : "pages/webview/webview",
+            "style" : {}
+        }
+        ,{
+            "path" : "pages/preview/preview",
+            "style" : {}
+        }
+        ,{
+            "path" : "pages/record/record",
+            "style" : {}
+        }
+		
+    ],
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "uni-app",
+		"navigationBarBackgroundColor": "#F8F8F8",
+		"backgroundColor": "#F8F8F8"
+	},
+	"tabBar":{   //设置选项卡
+		"color":"#91CFFF",
+		"selectedColor":"#FF758F",
+		"list":[
+			{
+				"pagePath":"pages/index/index",
+				"text":"首页",
+				"iconPath":"/static/images/home1%20.png",
+				"selectedIconPath":"/static/images/home2%20.png"
+			},
+			{
+				"pagePath":"pages/news/news",
+				"text":"新闻",
+				"iconPath":"/static/images/news2.png",
+				"selectedIconPath":"/static/images/news1.png"
+			}
+		]
+	}
+}
